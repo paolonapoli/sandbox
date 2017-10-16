@@ -25,7 +25,21 @@
 	<modules>
 		<module>sandbox-s5-model</module>
 		<module>sandbox-s5-dal</module>
+		<module>sandbox-s5-service</module>
+		<module>sandbox-s5-shared</module>
 	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
@@ -39,6 +53,18 @@
 			<dependency>
 				<groupId>it.pn.sandbox.spring5</groupId>
 				<artifactId>sandbox-s5-dal</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>it.pn.sandbox.spring5</groupId>
+				<artifactId>sandbox-s5-shared</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>it.pn.sandbox.spring5</groupId>
+				<artifactId>sandbox-s5-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 

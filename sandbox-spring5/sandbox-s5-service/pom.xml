@@ -6,24 +6,19 @@
 		<artifactId>sandbox-spring5</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>sandbox-s5-model</artifactId>
-	<name>PN Spring 5 sandbox MODEL layer</name>
-	<description>PN Spring 5 sandbox MODEL layer</description>
+	<artifactId>sandbox-s5-service</artifactId>
+	<name>PN Spring 5 sandbox SERVICE layer</name>
+	<description>PN Spring 5 sandbox SERVICE layer</description>
 
 	<dependencies>
 		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>javax.persistence-api</artifactId>
+			<groupId>it.pn.sandbox.spring5</groupId>
+			<artifactId>sandbox-s5-shared</artifactId>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
+			<groupId>it.pn.sandbox.spring5</groupId>
+			<artifactId>sandbox-s5-dal</artifactId>
 		</dependency>
 	</dependencies>
 </project>
