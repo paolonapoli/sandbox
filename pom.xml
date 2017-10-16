@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.pn.sandbox</groupId>
+	<artifactId>sandbox-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>PN sandbox Parent</name>
+	<description>PN sandbox Parent</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>sandbox-jdk8</module>
+		<module>sandbox-jdk9</module>
+		<module>sandbox-spring5</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Plugin props -->
+		<jdk.version>1.8</jdk.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+
+		<!-- Dependency props -->
+		<commons-lang3.version>3.6</commons-lang3.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Modules -->
+			<dependency>
+				<groupId>it.pn.sandbox</groupId>
+				<artifactId>sandbox-jdk8</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>it.pn.sandbox</groupId>
+				<artifactId>sandbox-jdk9</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- 3rd party libs -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
