@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import it.pn.sandbox.spring5.dal.repository.accounting.GroupRepository;
-import it.pn.sandbox.spring5.dal.repository.accounting.UserRespository;
-import it.pn.sandbox.spring5.model.accounting.Group;
-import it.pn.sandbox.spring5.model.accounting.User;
+import it.pn.sandbox.spring5.dal.sql.accounting.GroupRepository;
+import it.pn.sandbox.spring5.dal.sql.accounting.UserRespository;
+import it.pn.sandbox.spring5.model.sql.accounting.Group;
+import it.pn.sandbox.spring5.model.sql.accounting.User;
 import it.pn.sandbox.spring5.service.accounting.AccountingService;
 import it.pn.sandbox.spring5.service.accounting.exception.AlreadyExistentGroupException;
 import it.pn.sandbox.spring5.service.accounting.exception.AlreadyExistentUserException;

@@ -6,9 +6,6 @@ package it.pn.sandbox.spring5.service.conf;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-
-import it.pn.sandbox.spring5.dal.conf.SandboxDalConfig;
 
 /**
  * Class SandboxServiceConfig representing ...
@@ -17,7 +14,7 @@ import it.pn.sandbox.spring5.dal.conf.SandboxDalConfig;
  *
  */
 @Configuration
-@Import(SandboxDalConfig.class)
+// @Import(SandboxDalConfig.class)
 @ComponentScan(basePackages = { "it.pn.sandbox.spring5.service.impl" })
 public class SandboxServiceConfig {
 }

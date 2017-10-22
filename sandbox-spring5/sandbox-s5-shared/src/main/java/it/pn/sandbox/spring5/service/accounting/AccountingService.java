@@ -6,8 +6,8 @@ package it.pn.sandbox.spring5.service.accounting;
 
 import java.util.Set;
 
-import it.pn.sandbox.spring5.model.accounting.Group;
-import it.pn.sandbox.spring5.model.accounting.User;
+import it.pn.sandbox.spring5.model.sql.accounting.Group;
+import it.pn.sandbox.spring5.model.sql.accounting.User;
 import it.pn.sandbox.spring5.service.accounting.exception.AlreadyExistentGroupException;
 import it.pn.sandbox.spring5.service.accounting.exception.AlreadyExistentUserException;
 import it.pn.sandbox.spring5.service.accounting.exception.InvalidGroupException;

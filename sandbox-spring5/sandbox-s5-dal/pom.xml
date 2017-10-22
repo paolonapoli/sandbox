@@ -11,6 +11,40 @@
 	<description>PN Spring 5 sandbox DAL layer</description>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<!-- AtomiKos -->
+		<dependency>
+			<groupId>com.atomikos</groupId>
+			<artifactId>transactions</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.atomikos</groupId>
+			<artifactId>transactions-jta</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.atomikos</groupId>
+			<artifactId>transactions-hibernate3</artifactId>
+			<version>4.0.4</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>hibernate</artifactId>
+					<groupId>org.hibernate</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- END AtomiKos -->
+
+		<!-- Project -->
 		<dependency>
 			<groupId>it.pn.sandbox.spring5</groupId>
 			<artifactId>sandbox-s5-model</artifactId>
@@ -19,6 +53,11 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
 		</dependency>
 
 		<dependency>
@@ -36,5 +75,22 @@
 			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.196</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 </project>
