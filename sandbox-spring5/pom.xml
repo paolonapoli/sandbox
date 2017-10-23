@@ -28,6 +28,7 @@
 		<module>sandbox-s5-dal</module>
 		<module>sandbox-s5-service</module>
 		<module>sandbox-s5-shared</module>
+		<module>sandbox-s5-web</module>
 	</modules>
 
 	<dependencies>
@@ -66,6 +67,12 @@
 			<dependency>
 				<groupId>it.pn.sandbox.spring5</groupId>
 				<artifactId>sandbox-s5-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>it.pn.sandbox.spring5</groupId>
+				<artifactId>sandbox-s5-web</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
